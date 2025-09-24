@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="OBJECT" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eaaa28;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M30.87,2.32L13.04,31.96h-4.06c.17-.58.56-1.18.86-1.71C15.24,20.84,21.14,11.68,26.64,2.32h4.23Z"/>
+  <path class="cls-1" d="M15.77,12.91c.11.1-1.2,2.27-1.36,2.53-3.25,5.55-6.65,11.02-10,16.51H.35L11.71,12.91h4.06Z"/>
+  <polygon class="cls-1" points="17.43 31.96 21.67 24.83 24.9 26.58 21.66 31.96 17.43 31.96"/>
+</svg>

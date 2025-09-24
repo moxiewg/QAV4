@@ -1,0 +1,871 @@
+{
+    "categories": [
+        {
+            "id": "profile-links",
+            "name": "እንትን ላይ Hi በለኝ",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f25",
+                    "title": "Linktree",
+                    "description": "<p>Central hub for links.<\/p>",
+                    "value": "https:\/\/linktr.ee\/mikafekadu",
+                    "icon": "assets\/icons\/icon_6d72ecea8945.svg",
+                    "color": "#42e661",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f23",
+                    "title": "LinkedIn Profile",
+                    "description": "Professional network profile.",
+                    "value": "https:\/\/www.linkedin.com\/in\/mikafekadu",
+                    "icon": "assets\/icons\/ino.svg",
+                    "color": "#0072b1",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f22",
+                    "title": "Portfolio-Site",
+                    "description": "<p>portfolio &amp; contact.<\/p>",
+                    "value": "https:\/\/www.mikafekadu.com",
+                    "icon": "assets\/icons\/icon_6099d47e4a65.svg",
+                    "color": "#ff5001",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f26",
+                    "title": "Email Address",
+                    "description": "Primary contact email.",
+                    "value": "i@mikafekadu.com",
+                    "icon": "assets\/icons\/svg_ (43).svg",
+                    "color": "#e6d2be",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_5a7ff00ae81d",
+                    "title": "IG Personal",
+                    "description": "<p>Visual updates &amp; inspiration<\/p>",
+                    "value": "https:\/\/www.instagram.com\/mikafekadu",
+                    "icon": "assets\/icons\/instagram.svg",
+                    "color": "#e4405f",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_a9aa5e389b6e",
+                    "title": "የቀኑ ቅኔ",
+                    "description": "<p>The music Telegram <\/p>",
+                    "value": "https:\/\/t.me\/songofthedaybymika",
+                    "icon": "assets\/icons\/concept.svg",
+                    "color": "#211f1e",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_3578b8bb66f9",
+                    "title": "የቀኑ ቅኔ Spotify",
+                    "description": "<p>the ones available on spottily<\/p>",
+                    "value": "https:\/\/open.spotify.com\/playlist\/6Sxuu13MvS8tO7zn7AcsXL",
+                    "icon": "assets\/icons\/spotify-logo-svgrepo-com.svg",
+                    "color": "#1ed760",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_f2bd28360378",
+                    "title": "My Behance",
+                    "description": "<p>Behance Portfolio<\/p>",
+                    "value": "https:\/\/www.behance.net\/mikafekadu",
+                    "icon": "assets\/icons\/behance.svg",
+                    "color": "#053eff",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_d3c98bafe12b",
+                    "title": "YouTube Mika",
+                    "description": "<p>Subscribe for design tips, tricks, and inspiration!<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@mikafekadu",
+                    "icon": "assets\/icons\/icon_6e9f570559d6.svg",
+                    "color": "#ed2224",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_e43ddc9ed2d0",
+                    "title": "Tiktok",
+                    "description": "<p>Elements, ponderings, promos &amp; Shega Vibes<\/p><p><br><\/p>",
+                    "value": "https:\/\/www.tiktok.com\/@mikafekadu",
+                    "icon": "assets\/icons\/icon_d8df2201a83c.svg",
+                    "color": "#0c1426",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_f9c42f395e35",
+                    "title": "Clubhouse",
+                    "description": "<p>\r\n♠️ Design &amp; Brand Dev ♠️ stand up ♠️ Music ♠️ Coffee ♠️ ቀደዳ <\/p>",
+                    "value": "https:\/\/www.clubhouse.com\/@mikafekadu",
+                    "icon": "assets\/icons\/icon_8667ce4b54f5.png",
+                    "color": "#f1efe3",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_615f52b075e9",
+                    "title": "Phone ET",
+                    "description": "<p>EthioTelecom<\/p>",
+                    "value": "+251913109253",
+                    "icon": "assets\/icons\/icon_e691659d8ab7.png",
+                    "color": "#caddb0",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_e7cd514e5448",
+                    "title": "Safaricom",
+                    "description": "<p>Darius<\/p>",
+                    "value": "+251777109253",
+                    "icon": "assets\/icons\/icon_b679b83cb0f4.png",
+                    "color": "#159f4a",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_a4fbbfd552b8",
+                    "title": "Caledly",
+                    "description": "<p>Book a 30min meet up<\/p>",
+                    "value": "https:\/\/calendly.com\/dna_testing\/experiment1et",
+                    "icon": "assets\/icons\/icon_a6de1b35a483.svg",
+                    "color": "#d5d7fd",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "banking-info",
+            "name": "Account ላክልኝ",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f2c",
+                    "title": "CBE",
+                    "description": "Commercial Bank of Ethiopia",
+                    "value": "Commercial Bank of Ethiopia: Mikael Fekadu - 1000028607548",
+                    "icon": "assets\/icons\/cbe.svg",
+                    "color": "#6b1b6b",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f2d",
+                    "title": "Awash Bank",
+                    "description": "Awash Bank Account",
+                    "value": "Awash Bank: MikaEl Fekadu - 01320818251000",
+                    "icon": "assets\/icons\/target audience.svg",
+                    "color": "#000066",
+                    "allow_qr": true,
+                    "allow_share": false
+                },
+                {
+                    "id": "item_63e8c4a9b0f2e",
+                    "title": "Abyssinia",
+                    "description": "Bank of Abyssinia",
+                    "value": "Bank Of Abyssinia: Mikael Fekadu - 63112143",
+                    "icon": "assets\/icons\/office.svg",
+                    "color": "#f2ad1c",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f2f",
+                    "title": "Birhan Personal",
+                    "description": "Birhan Bank S.C.",
+                    "value": "Birhan Bank: MikaEl Fekadu - 1011613535359",
+                    "icon": "assets\/icons\/berhan.svg",
+                    "color": "#003da5",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f30",
+                    "title": "Hibret Bank",
+                    "description": "United Bank S.C.",
+                    "value": "United Bank: MikaEl Fekadu - 1240416825810010",
+                    "icon": "assets\/icons\/truck.svg",
+                    "color": "#00afac",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f31",
+                    "title": "Dashen Bank",
+                    "description": "Dashen Bank S.C.",
+                    "value": "Dashen Bank: Mikael Fekadu - 5122190777011",
+                    "icon": "assets\/icons\/stationery.svg",
+                    "color": "#bae4ff",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f32",
+                    "title": "Wegagen",
+                    "description": "<p>Wegagen Personal<\/p>",
+                    "value": "Wegagen Bank: MikaEl Fekadu - 00607642",
+                    "icon": "assets\/icons\/icon_4df0d20c9d4f.svg",
+                    "color": "#f36c24",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f33",
+                    "title": "Nib Personal",
+                    "description": "Nib International Bank S.C.",
+                    "value": "Nib International Bank: MikaEl Fekadu - 333 SAV 214",
+                    "icon": "assets\/icons\/nib.svg",
+                    "color": "#8e5422",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f34",
+                    "title": "Telebirr",
+                    "description": "Mobile money option.",
+                    "value": "MikaEl Fekadu: 0913109253",
+                    "icon": "assets\/icons\/TeleBirr Logo.svg",
+                    "color": "#dbebc7",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_4ddfd81a6407",
+                    "title": "Bunna Bank",
+                    "description": "<p>Buna Personal<\/p>",
+                    "value": "Bunna Bank: MikaEl Fekadu - 1011613535359",
+                    "icon": "assets\/icons\/icon_26aa8539b0be.svg",
+                    "color": "#551718",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_dcf2bc84b2c5",
+                    "title": "Sinqee Bank",
+                    "description": "<p>Persoal<\/p>",
+                    "value": "Sinqee Bank: MikaEl Fekadu - 1011613535359",
+                    "icon": "assets\/icons\/icon_e4e768b89c76.png",
+                    "color": "#598126",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_9b68f6097632",
+                    "title": "Enat Bank",
+                    "description": "<p>Enat Personal<\/p>",
+                    "value": "Enat Bank  MikaEl Fekadu 0021106996340001",
+                    "icon": "assets\/icons\/icon_b21087723eb1.svg",
+                    "color": "#0f2d51",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_01ec23342de4",
+                    "title": "Zemen",
+                    "description": "<p>Company Account<\/p>",
+                    "value": "Zemen Bank Senay Brands 1900 7621 6998",
+                    "icon": "assets\/icons\/icon_3747dca4bdad.svg",
+                    "color": "#d71920",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "web-portfolio",
+            "name": "website ትስራለህ እንዴ?",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f22",
+                    "title": "Portfolio",
+                    "description": "<p>Main portfolio &amp; contact.<\/p>",
+                    "value": "https:\/\/www.mikafekadu.com",
+                    "icon": "assets\/icons\/icon_425b16bda053.svg",
+                    "color": "#ff5001",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_611d64432c2c",
+                    "title": "Rungo Liquors",
+                    "description": "<p>Webstore &amp; Profile<\/p>",
+                    "value": "https:\/\/rungo.arifdesigns.com\/",
+                    "icon": "assets\/icons\/icon_241743300b5a.png",
+                    "color": "#1153cd",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_a766fbbe2241",
+                    "title": "Xtreme Laundry",
+                    "description": "<p>Multi-location <\/p>",
+                    "value": "https:\/\/xt.spectrumplc.com\/",
+                    "icon": "assets\/icons\/icon_c18a3761bdc3.png",
+                    "color": "#bfd1f5",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_4b74dcc25a98",
+                    "title": "Aman &amp; Partners",
+                    "description": "<p>Law Firm <\/p>",
+                    "value": "https:\/\/www.aaclo.com\/",
+                    "icon": "assets\/icons\/icon_a1b54ea9a80f.svg",
+                    "color": "#164271",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_7664fd5dcd97",
+                    "title": "Ventum Group",
+                    "description": "<p>trading &amp;  travels  <\/p>",
+                    "value": "https:\/\/ventumgeneralimporter.com\/",
+                    "icon": "assets\/icons\/icon_a41dd0125053.svg",
+                    "color": "#1c2d82",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_b3c8e31c022c",
+                    "title": "Zenachwear",
+                    "description": "<p>Official Store<\/p>",
+                    "value": "https:\/\/zenachwear.com\/",
+                    "icon": "assets\/icons\/icon_a83f434f578f.svg",
+                    "color": "#b68e51",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_f3a82854dadf",
+                    "title": "Yenad Coffee",
+                    "description": "<p>Ethiopian Coffee With Roots <\/p>",
+                    "value": "https:\/\/www.yenadcoffee.com\/",
+                    "icon": "assets\/icons\/icon_cf29ff588b1c.svg",
+                    "color": "#191647",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_fb61a6d23ec0",
+                    "title": "Women In Cofee",
+                    "description": "<p>Ethiopian Chapter <\/p>",
+                    "value": "https:\/\/wicethiopia.org\/",
+                    "icon": "assets\/icons\/icon_3aa7bd1446fc.svg",
+                    "color": "#821517",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_a6c7be0748af",
+                    "title": "African Humaniterian Action",
+                    "description": "<p>The Mika version<\/p>",
+                    "value": "https:\/\/aha.arifdesigns.com\/",
+                    "icon": "assets\/icons\/icon_f24dd3105ca0.png",
+                    "color": "#15bda9",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_ffb9d2a14dc1",
+                    "title": "JS Computer Solutions",
+                    "description": "<p>Solutions Delivered <\/p>",
+                    "value": "https:\/\/jscomputersol.com\/",
+                    "icon": "assets\/icons\/icon_07d3c8166d46.svg",
+                    "color": "#f37520",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_396a26773a98",
+                    "title": "Spectrum",
+                    "description": "<p>Brand Solutions<\/p>",
+                    "value": "https:\/\/www.spectrumplc.com\/",
+                    "icon": "assets\/icons\/icon_28b000b89058.svg",
+                    "color": "#2b2b2b",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_4d86bd9e118a",
+                    "title": "Zeybe Homes",
+                    "description": "<p>ኑሮ በዘይቤ <\/p>",
+                    "value": "https:\/\/zeybehomes.com\/",
+                    "icon": "assets\/icons\/icon_2301349c5f1c.svg",
+                    "color": "#0e3b5e",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_08a6c69ffa24",
+                    "title": "Toolfolio",
+                    "description": "<p>By Mika<\/p>",
+                    "value": "https:\/\/arifsolutions.com\/Tools\/",
+                    "icon": "assets\/icons\/icon_3741d4783eec.png",
+                    "color": "#01013d",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_2555a0c19c1a",
+                    "title": "QA Wallet",
+                    "description": "<p>test drive the wallet<\/p>",
+                    "value": "https:\/\/arifsolutions.com\/Tools\/c2\/",
+                    "icon": "assets\/icons\/icon_ca9e377839bd.svg",
+                    "color": "#620b81",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "tuts-corner",
+            "name": "Skills ልህቀት  Center",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f43",
+                    "title": "Panter",
+                    "description": "Illustrator tutorials",
+                    "value": "https:\/\/www.youtube.com\/@PANTERvision",
+                    "icon": "assets\/icons\/P_A_N_T_E_R_X.png",
+                    "color": "#242120",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f44",
+                    "title": "Javier AEX",
+                    "description": "<p>Motion tutorials<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@JavierMercedes",
+                    "icon": "assets\/icons\/JM.png",
+                    "color": "#0a4ce6",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_50f8954992eb",
+                    "title": "Blender Vitals",
+                    "description": "<p>Blender quickies<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@BlenderVitals",
+                    "icon": "assets\/icons\/blender-svgrepo-com.svg",
+                    "color": "#6ae45c",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_731bef3ab72e",
+                    "title": "CG Cookie",
+                    "description": "<p>Blender essentials to advanced<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@cg_cookie",
+                    "icon": "assets\/icons\/icon_8e0c845c5011.png",
+                    "color": "#383533",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_aba9a55ef427",
+                    "title": "Brand New",
+                    "description": "<p>logo, identity, and brand redesigns<\/p>",
+                    "value": "https:\/\/www.underconsideration.com\/brandnew\/",
+                    "icon": "assets\/icons\/icon_688667dece09.svg",
+                    "color": "#fa2837",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_f6955e2c09c3",
+                    "title": "Brand Style Guides",
+                    "description": "<p>branding guidelines archive<\/p><p><br><\/p>",
+                    "value": "https:\/\/brandingstyleguides.com\/",
+                    "icon": "assets\/icons\/icon_6c65e618a174.svg",
+                    "color": "#d1d1d1",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_5ba08c07f590",
+                    "title": "Brandon Li",
+                    "description": "<p>a Nomadic filmmaker on an endless world tour. <\/p>",
+                    "value": "https:\/\/www.youtube.com\/@BrandonLiUnscripted",
+                    "icon": "assets\/icons\/icon_92b88c3935b5.svg",
+                    "color": "#fcd469",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_5b3ce26f7e0b",
+                    "title": "Satori Graphics",
+                    "description": "<p>Graphic Design Tuts<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@SatoriGraphics",
+                    "icon": "assets\/icons\/flyer.svg",
+                    "color": "#bebebe",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_a826483854c6",
+                    "title": "Brand Design Society",
+                    "description": "<p>World Brand Design Society<\/p>",
+                    "value": "https:\/\/worldbranddesign.com\/",
+                    "icon": "assets\/icons\/icon_c7091441eb7a.jpeg",
+                    "color": "#c2ae70",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "pods",
+            "name": "ሸጋ Hangouts",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f39",
+                    "title": "Netsanet Podcast",
+                    "description": "<p>Vibes with Tsilate &amp; Tsion<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@Netsanet_Podcast",
+                    "icon": "assets\/icons\/icon_a7214993f5e3.svg",
+                    "color": "#12351f",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3a",
+                    "title": "Design Matters",
+                    "description": "<p>with Debbie Millman<\/p>",
+                    "value": "https:\/\/yt.cool\/HMnrxK",
+                    "icon": "assets\/icons\/debbie.png",
+                    "color": "#8bdeda",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3b",
+                    "title": "99% Invisible",
+                    "description": "",
+                    "value": "https:\/\/www.youtube.com\/@99percentinvisiblepodcast",
+                    "icon": "assets\/icons\/99i.png",
+                    "color": "#000000",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3c",
+                    "title": "FUTUR",
+                    "description": "With Chris Do & Team",
+                    "value": "https:\/\/www.youtube.com\/@thefutur",
+                    "icon": "assets\/icons\/The_Futur_trans.png",
+                    "color": "#0000dd",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3d",
+                    "title": "Dejaf TV",
+                    "description": "with Dawit & Guests",
+                    "value": "https:\/\/www.youtube.com\/@dejaftv",
+                    "icon": "assets\/icons\/Dejaf_TV_2.png",
+                    "color": "#e63d00",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_902be1101c43",
+                    "title": "Gugut Podcast",
+                    "description": "<p>vibes with the biruks<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@Gugutpodcast",
+                    "icon": "assets\/icons\/icon_7ceca4ecce30.svg",
+                    "color": "#ef901c",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_a44d6ac2f282",
+                    "title": "Kalandras",
+                    "description": "<p>conversations with MikiMAC<\/p>",
+                    "value": "https:\/\/spti.fi\/QgTWf56",
+                    "icon": "assets\/icons\/icon_38fcb74a3699.png",
+                    "color": "#fcd707",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_f264cc899f83",
+                    "title": "Creative Peptalk",
+                    "description": "<p>Shega conversations by &amp; for creatives <\/p>",
+                    "value": "https:\/\/www.creativepeptalk.com\/",
+                    "icon": "assets\/icons\/icon_c976f54c75b6.png",
+                    "color": "#ffe133",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "client-links",
+            "name": "ዲዛይን ስንት ነው?",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f35",
+                    "title": "Brand Identity",
+                    "description": "<p>New branding projects.<\/p>",
+                    "value": "https:\/\/forms.gle\/26u2eSBL63PnYz9i8",
+                    "icon": "assets\/icons\/box.svg",
+                    "color": "#e9c708",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f36",
+                    "title": "Web Design",
+                    "description": "<p>New website projects.<\/p>",
+                    "value": "https:\/\/forms.gle\/BbiqxoDkxQUoLEgG7",
+                    "icon": "assets\/icons\/identity.svg",
+                    "color": "#95df7a",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f37",
+                    "title": "Company Profile",
+                    "description": "<p>Company profile breif.<\/p>",
+                    "value": "https:\/\/forms.gle\/nEoy8JkYd6Kbu3b17",
+                    "icon": "assets\/icons\/procuratorate-svgrepo-com.svg",
+                    "color": "#d2c8aa",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f38",
+                    "title": "Testimonials",
+                    "description": "<p>Submit client feedback<\/p>",
+                    "value": "https:\/\/www.mikafekadu.com\/testimonials\/submit",
+                    "icon": "assets\/icons\/svg_ (9).svg",
+                    "color": "#001e14",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_fe2bde9dfe9f",
+                    "title": "Brochoure",
+                    "description": "<p>Brochure Design Questionnaire<\/p>",
+                    "value": "https:\/\/forms.gle\/corLb4ooppQGBuko6",
+                    "icon": "assets\/icons\/svg_ (26).svg",
+                    "color": "#ffcfb9",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "essay-channels",
+            "name": "Essay፣ እንዲህ ነው እንጂ..",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f3e",
+                    "title": "FD Signifier",
+                    "description": "takes and talks of Fiq",
+                    "value": "https:\/\/www.youtube.com\/@FDSignifire",
+                    "icon": "assets\/icons\/F.D_Signifier.png",
+                    "color": "#798b63",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3f",
+                    "title": "Pursuit of Wonder",
+                    "description": "Powerful ideas and stories",
+                    "value": "https:\/\/www.youtube.com\/@PursuitofWonder",
+                    "icon": "assets\/icons\/Pursuit_of_Wonder_trans.png",
+                    "color": "#0e2e5f",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f40",
+                    "title": "The Vile Eye",
+                    "description": "Analysis of Evil",
+                    "value": "https:\/\/www.youtube.com\/@TheVileEye",
+                    "icon": "assets\/icons\/The_Vile_Eye.png",
+                    "color": "#020202",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f41",
+                    "title": "Some More News",
+                    "description": "Better News",
+                    "value": "https:\/\/www.youtube.com\/@SMN",
+                    "icon": "assets\/icons\/SMN.png",
+                    "color": "#4e99bb",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f42",
+                    "title": "Harland Spinks",
+                    "description": "takes and talks of Harland",
+                    "value": "https:\/\/www.youtube.com\/@harlandspinks",
+                    "icon": "assets\/icons\/Harland_Spinks.png",
+                    "color": "#282924",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_1230718e304b",
+                    "title": "Now You See It",
+                    "description": "<p>Cinema &amp; Media Analysis <\/p>",
+                    "value": "https:\/\/www.youtube.com\/@NowYouSeeIt",
+                    "icon": "assets\/icons\/icon_26fbb9cbe464.png",
+                    "color": "#ff6040",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_f8e1a025828f",
+                    "title": "Legal Eagle",
+                    "description": "<p>law essays and updates by an actual lawyer<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@LegalEagle",
+                    "icon": "assets\/icons\/icon_b8f507db064e.png",
+                    "color": "#0a2246",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_52db5ca7870d",
+                    "title": "Nerd Writer",
+                    "description": "<p>a video series about art and culture.<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@Nerdwriter1",
+                    "icon": "assets\/icons\/icon_bbc7850a0f2f.svg",
+                    "color": "#00bdff",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "tikustakes",
+            "name": "ቀደዳ እና Vibes",
+            "items": [
+                {
+                    "id": "item_16d17b8bd0eb",
+                    "title": "Pitch Meetings",
+                    "description": "<p>by Ryan George<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@PitchMeetings",
+                    "icon": "assets\/icons\/icon_32e21e5771d4.png",
+                    "color": "#c5c0ad",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_06a02d4c3c2e",
+                    "title": "Radio Garden",
+                    "description": "<p>Stroll over the global waves<\/p>",
+                    "value": "https:\/\/radio.garden\/",
+                    "icon": "assets\/icons\/icon_2cc8867d5a43.svg",
+                    "color": "#0658b0",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_1c525c345121",
+                    "title": "Explained",
+                    "description": "<p> By an Idiot<\/p>",
+                    "value": "www.youtube.com\/@HighBoi",
+                    "icon": "assets\/icons\/icon_81d6b80a59bc.png",
+                    "color": "#86def6",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63b2e4049252",
+                    "title": "Pointless Hub",
+                    "description": "<p>It is what it is. <\/p>",
+                    "value": "https:\/\/www.youtube.com\/@PointlessHub",
+                    "icon": "assets\/icons\/icon_097d3085b148.png",
+                    "color": "#790a79",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "stand-ups",
+            "name": "ቁም Comedy",
+            "items": [
+                {
+                    "id": "item_036ebd4baef0",
+                    "title": "Carlin",
+                    "description": "<p>i mean...<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@OfficialGeorgeCarlin",
+                    "icon": "assets\/icons\/icon_e443c586468f.png",
+                    "color": "#06728e",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_2c5a27de8543",
+                    "title": "Drybar Comendy",
+                    "description": "<p>clean comedy demo<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@DryBarComedy",
+                    "icon": "assets\/icons\/icon_8916fac234a4.png",
+                    "color": "#6b088f",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_c8a2fa14074a",
+                    "title": "Josh Johnson",
+                    "description": "<p>An hour a week, community, tours<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@JoshJohnsonComedy",
+                    "icon": "assets\/icons\/icon_5a6ecd2edac3.png",
+                    "color": "#002eac",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_985b2fc72ae2",
+                    "title": "ሳቅ Central",
+                    "description": "<p>Fav Comedy Platform In Addis<\/p>",
+                    "value": "https:\/\/www.youtube.com\/@saqcentralmedia",
+                    "icon": "assets\/icons\/icon_dcbdc14b5c3b.png",
+                    "color": "#1f1e1e",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_d68713c09789",
+                    "title": "Tsilate",
+                    "description": "<p>an Experience of a woman in Addis in a fun and spicy set<\/p>",
+                    "value": "https:\/\/www.youtube.com\/watch?v=0E5I7tp8HHA",
+                    "icon": "assets\/icons\/icon_a6244ecdf75e.png",
+                    "color": "#9b1b1f",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_84a0b7aed98c",
+                    "title": "J.B.Ball",
+                    "description": "<p>It's My Privilege Comedy<\/p>",
+                    "value": "https:\/\/www.youtube.com\/watch?v=69TvedYtsuo&amp;amp;t=5s",
+                    "icon": "assets\/icons\/icon_4cde5423b471.png",
+                    "color": "#de6c10",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "modified": "2025-09-24T10:50:59+00:00"
+    }
+}

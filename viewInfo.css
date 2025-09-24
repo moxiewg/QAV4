@@ -1,0 +1,1124 @@
+/*
+ * Mika's QA-infowallet
+ * Author: Mika Fekadu
+ * Website: https://www.mikafekadu.com
+ * Email: i@mikafekadu.com
+ * Copyright (c) 2025 Mika Fekadu. All rights reserved.
+ */
+
+/* viewInfo.css */
+
+/* --- Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Big+Shoulders+Stencil:wght@100;300&display=swap');
+/* --- Base & Color Variables --- */
+:root {
+    /* Light Mode Palette */
+    --mika_primary_light: #ff5001;
+    --mika_secondary_light: #ff702f;
+    --mika_tertiary_light: #ff8f5d;
+    --mika_quaternary_light: #ffaf8b;
+    --mika_quinary_light: #ffcfb9;
+    --mika_senary_light: #fff6f2;
+    --mika_text_dark_base: #333333;
+    --mika_text_light_base: #ffffff;
+    --mika_success_light: #4CAF50;
+    --mika_error_light: #F44336;
+    --mika_warning_light: #FF9800;
+    --mika_info_light: #2196F3;
+    --mika_bg_light: #f8f9fa;
+    --mika_card_bg_light: #ffffff;
+    --mika_border_light: #e5e7eb;
+    --mika_shadow_light: rgba(0, 0, 0, 0.08);
+    --mika_glow_opacity_light: 0.3;
+    --mika_gradient_stop_light: rgba(0, 0, 0, 0.05);
+    --mika_body_font_light: var(--mika_text_dark_base);
+    --mika_heading_font_light: var(--mika_text_dark_base);
+    --mika_input_bg_light: #ffffff;
+    --mika_input_border_light: var(--mika_border_light);
+    --mika_readonly_bg_light: #f1f3f5; /* Slightly different bg for readonly field */
+
+    /* Dark Mode Palette */
+    --mika_primary_dark: #ff6b01;
+    --mika_secondary_dark: #ff853d;
+    --mika_tertiary_dark: #ffa06b;
+    --mika_quaternary_dark: #ffbb99;
+    --mika_quinary_dark: #ffd6c7;
+    --mika_senary_dark: #2a2a3a;
+    --mika_text_dark_base_dark: #e1e1e6;
+    --mika_text_light_base_dark: #13131f;
+    --mika_success_dark: #66BB6A;
+    --mika_error_dark: #EF5350;
+    --mika_warning_dark: #FFA726;
+    --mika_info_dark: #42A5F5;
+    --mika_bg_dark: #13131f;
+    --mika_card_bg_dark: #1e1e2d;
+    --mika_border_dark: #3a3a4a;
+    --mika_shadow_dark: rgba(0, 0, 0, 0.2);
+    --mika_glow_opacity_dark: 0.4;
+    --mika_gradient_stop_dark: rgba(255, 255, 255, 0.05);
+    --mika_body_font_dark: var(--mika_text_dark_base_dark);
+    --mika_heading_font_dark: var(--mika_text_dark_base_dark);
+    --mika_input_bg_dark: #2a2a3a;
+    --mika_input_border_dark: var(--mika_border_dark);
+    --mika_readonly_bg_dark: #252535; /* Slightly different bg for readonly field */
+
+
+    /* Font Families */
+    --font-heading: 'Syne', sans-serif;
+    --font-body: 'Syne', sans-serif;
+    --font-number: 'Big Shoulders Stencil', sans-serif;
+
+     /* Card Scaling & Layout */
+    /* UPDATE: Adjusted min/max widths for ~3 columns */
+    --card-min-width: 250px;
+    --card-max-width: 500px; /* Increased max width */
+    --card-grid-gap: 2rem; /* Increased gap */
+    --card-padding: 1.5rem; /* Consistent padding */
+}
+
+/* --- Apply Mode Variables --- */
+body { font-family: var(--font-body); transition: background-color 0.3s ease, color 0.3s ease; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; line-height: 1.5; }
+body.light-mode { background-color: var(--mika_bg_light); color: var(--mika_body_font_light); --mika_primary: var(--mika_primary_light); --mika_secondary: var(--mika_secondary_light); --mika_tertiary: var(--mika_tertiary_light); --mika_quaternary: var(--mika_quaternary_light); --mika_quinary: var(--mika_quinary_light); --mika_senary: var(--mika_senary_light); --mika_text_primary: var(--mika_body_font_light); --mika_text_on_primary: var(--mika_text_light_base); --mika_text_heading: var(--mika_heading_font_light); --mika_text_light: var(--mika_text_light_base); --mika_text_dark: var(--mika_text_dark_base); --mika_success: var(--mika_success_light); --mika_error: var(--mika_error_light); --mika_warning: var(--mika_warning_light); --mika_info: var(--mika_info_light); --mika_bg_main: var(--mika_bg_light); --mika_card_bg: var(--mika_card_bg_light); --mika_border_color: var(--mika_border_light); --mika_shadow_color: var(--mika_shadow_light); --mika_glow_opacity: var(--mika_glow_opacity_light); --mika_gradient_stop: var(--mika_gradient_stop_light); --mika_input_bg: var(--mika_input_bg_light); --mika_input_border: var(--mika_input_border_light); --mika_readonly_bg: var(--mika_readonly_bg_light); }
+body.dark-mode { background-color: var(--mika_bg_dark); color: var(--mika_body_font_dark); --mika_primary: var(--mika_primary_dark); --mika_secondary: var(--mika_secondary_dark); --mika_tertiary: var(--mika_tertiary_dark); --mika_quaternary: var(--mika_quaternary_dark); --mika_quinary: var(--mika_quinary_dark); --mika_senary: var(--mika_senary_dark); --mika_text_primary: var(--mika_body_font_dark); --mika_text_on_primary: var(--mika_text_light_base_dark); --mika_text_heading: var(--mika_heading_font_dark); --mika_text_light: var(--mika_text_light_base_dark); --mika_text_dark: var(--mika_text_dark_base_dark); --mika_success: var(--mika_success_dark); --mika_error: var(--mika_error_dark); --mika_warning: var(--mika_warning_dark); --mika_info: var(--mika_info_dark); --mika_bg_main: var(--mika_bg_dark); --mika_card_bg: var(--mika_card_bg_dark); --mika_border_color: var(--mika_border_dark); --mika_shadow_color: var(--mika_shadow_dark); --mika_glow_opacity: var(--mika_glow_opacity_dark); --mika_gradient_stop: var(--mika_gradient_stop_dark); --mika_input_bg: var(--mika_input_bg_dark); --mika_input_border: var(--mika_input_border_dark); --mika_readonly_bg: var(--mika_readonly_bg_dark); }
+
+/* --- Utility --- */
+.hidden { display: none !important; }
+
+/* --- General Styles --- */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--mika_text_heading); margin: 0; }
+.main-container { opacity: 0; transition: opacity 0.5s ease-in-out; min-height: 100vh; overflow: hidden; position: relative; }
+.main-container.visible { opacity: 1; }
+
+/* --- Login Form --- */
+.login-container { display: flex; justify-content: center; align-items: center;  background-color: var(--mika_bg_main); }
+.login-form { background-color: var(--mika_card_bg); padding: 2rem; border-radius: 0.5rem; box-shadow: 0 4px 12px var(--mika_shadow_color); border: 1px solid var(--mika_border_color); max-width: 400px; width: 90%; }
+
+.login-form h1 { color: var(--mika_primary_light); margin-bottom: 1.5rem; text-align: center; font-weight: 700; font-size: 1.5rem; font-family: var(--font-heading); }
+.login-form label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--mika_text_primary); font-size: 0.875rem; }
+.login-form input[type="password"] { width: 100%; padding: 0.75rem; border: 1px solid var(--mika_input_border); border-radius: 0.375rem; margin-bottom: 1rem; background-color: var(--mika_input_bg); color: var(--mika_text_primary); font-size: 1rem; box-sizing: border-box; }
+.login-form button { width: 100%; padding: 0.75rem; background-color: var(--mika_primary_light); color: var(--mika_text_on_primary); border: none; border-radius: 0.375rem; font-weight: 700; cursor: pointer; transition: background-color 0.2s ease, transform 0.1s ease; font-size: 1rem; }
+.login-form button:hover { background-color: var(--mika_secondary_light); }
+.login-form button:active { transform: scale(0.98); }
+.login-error { color: var(--mika_error); margin-top: 1rem; text-align: center; font-size: 0.875rem; }
+
+
+
+
+.login-form .qa-logo {
+    display: block;
+    /* width: 250px;
+    height: 150px; */
+    margin:0 auto 1rem auto;
+  }
+
+
+
+/* --- Swiper Category View --- */
+.category-swiper-container { position: absolute; top: 0; left: 0; width: 100%; height: 100vh; opacity: 1; visibility: visible; transition: opacity 0.5s ease, visibility 0s linear 0s; background-color: var(--mika_bg_main); }
+.category-swiper-container.hidden { opacity: 0; visibility: hidden; transition: opacity 0.5s ease, visibility 0s linear 0.5s; }
+.swiper-slide.category-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--mika_card_bg);
+    color: var(--mika_text_primary);
+    padding: 2rem;
+    box-sizing: border-box;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.granim-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.slide-content {
+    position: relative;
+    z-index: 1;
+}
+
+.swiper-slide.category-slide:hover {
+    transform: scale(1.02);
+    z-index: 5;
+}
+
+/* FitText for Category Titles */
+.category-slide h2 {
+    font-size: 3rem; /* Default size */
+    font-weight: 700;
+    color: var(--mika_text_primary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.category-slide p {
+    font-size: clamp(0.6rem, 2vw, 1.1rem);
+    opacity: 0.8;
+}
+
+/* Animated category title letters */
+.category-title.animated {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--mika_text_on_primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.category-title.animated .letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px) scale(0.8) rotate(-8deg);
+  will-change: transform, opacity;
+}
+
+/* Elegant Button Styling */
+.view-items-button {
+    background-color: var(--mika_primary);
+    color: var(--mika_text_on_primary);
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.view-items-button:hover {
+    background-color: var(--mika_secondary);
+    transform: translateY(-2px);
+}
+
+.view-items-button:active {
+    transform: translateY(1px);
+}
+
+/* --- Card List View --- */
+.card-list-container { position: absolute; top: 0; left: 0; width: 100%; height: 100vh; opacity: 0; visibility: hidden; overflow-y: auto; 
+    padding: var(--card-grid-gap);
+     box-sizing: border-box; background-color: var(--mika_bg_main); transition: opacity 0.5s ease, visibility 0s linear 0s; }
+.card-list-container.visible { opacity: 1; visibility: visible; transition: opacity 0.5s ease, visibility 0s linear 0s; }
+:root { --header-height: 65px; }
+
+.card-list-header { position: fixed; top: 0; left: 0; width: 100%; display: flex; align-items: center; padding: 0 var(--card-grid-gap); height: var(--header-height); background-color: rgba(var(--mika_bg_main-rgb, 255, 255, 255), 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 10;  box-sizing: border-box; }
+.card-list-header .refresh-button {
+  display: inline-flex !important;
+  z-index: 1000;
+  background: var(--mika_card_bg, #fff);
+  color: var(--mika_primary, #ff5001);
+  border: 1px solid var(--mika_border_color, #e5e7eb);
+  box-shadow: 0 2px 8px var(--mika_shadow_color, rgba(0,0,0,0.08));
+}
+body.light-mode { --mika_bg_main-rgb: 248, 249, 250; }
+body.dark-mode { --mika_bg_main-rgb: 19, 19, 31; }
+.back-button { background: none; border: none; color: var(--mika_primary); font-size: 1.75rem; cursor: pointer; margin-right: 0.75rem; padding: 0.5rem; line-height: 1; transition: color 0.2s ease, transform 0.2s ease; }
+.back-button:hover { color: var(--mika_secondary); transform: scale(1.1); }
+.card-list-title { 
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Dynamically adjust font size */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    text-align: center; /* Center align between back button and search */
+}
+.search_container {
+    position: relative;
+    --size-button: 40px;
+    color: white;
+  }
+  
+  .search-input {
+    padding-left: var(--size-button);
+    height: var(--size-button);
+    font-size: 15px;
+    border: none;
+    color: #fff;
+    outline: none;
+    width: var(--size-button);
+    transition: all ease 0.3s;
+    background-color: #191A1E;
+    box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .search_container .icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+/* --- Card Grid - Updated --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--card-grid-gap);
+    padding-top: 1rem;
+    justify-content: center; /* Center cards */
+    padding: 50px 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* --- Item Card Styling - Updated Layout --- */
+.item-card {
+    --card-base-color-rgb: 128, 128, 128;
+    --card-glow-color-rgba: rgba(0,0,0,0);
+    --card-text-color: var(--mika_text_primary);
+    --card-glow-opacity: 0;
+    --before-width: 0%;
+
+    /* UPDATE: No fixed aspect ratio - let content define height */
+    aspect-ratio: 1.586 / 1;
+    min-height: 200px; /* Ensure a minimum height */
+    border-radius: 16px; /* Slightly rounder */
+    padding: var(--card-padding);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Keep column flow */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--card-bg-color, #ccc) 0%, var(--card-bg-gradient-stop, #aaa) 100%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s cubic-bezier(.03,.98,.52,.99), box-shadow 0.3s, filter 0.3s;
+    will-change: transform, box-shadow, filter;
+    perspective: 800px;
+    cursor: default;
+    opacity: 0;
+    transform: translateY(20px);
+    border: 1px solid rgba(var(--card-base-color-rgb), 0.15);
+    color: var(--card-text-color);
+    padding-bottom: 0.4rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.item-card:hover { 
+    transform: translateY(-6px) scale(1.02); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); 
+    z-index: 2; 
+}
+
+.item-card .shine {
+    pointer-events: none;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: inherit;
+    z-index: 2;
+    background: linear-gradient(120deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 80%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.item-card.tilted .shine {
+    opacity: 1;
+}
+
+/* UPDATE: New card content wrapper for flex layout */
+.card-top-content {
+    display: flex;
+    flex-direction: column; /* Stack logo, text block */
+    align-items: flex-start; /* Align items left */
+    flex-grow: 1; /* Allow this section to grow */
+    margin-bottom: 0.01rem; /* Space before actions/value */
+}
+
+/* UPDATE: Logo positioning */
+
+
+.card-logo {
+    position: relative;
+    width: clamp(80px, 23%, 130px);
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    align-self: flex-end;
+}
+
+@media (max-width: 1024px) {
+    .card-logo {
+        max-width: 130px;
+    }
+}
+
+.card-logo img, .card-logo svg { 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    border-radius: 0 !important; /* Remove border-radius for logo */
+}
+
+.card-text-block {
+    /* Contains name and description */
+    width: 100%;
+}
+
+.card-name {
+  font-size: clamp(0.8rem, 3vw, 1.6rem); /* Dynamically adjust font size */
+  font-weight: 700;
+  line-height: 0.8;
+  color: inherit;
+} 
+.card-description { font-family: var(--font-heading); font-size: clamp(0.35rem, 2.5vw, 0.65rem); opacity: 0.9; margin-bottom: 0; /* Removed bottom margin here */ line-height: 1; color: inherit; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; /* Allow more lines */ -webkit-box-orient: vertical; font-weight: 200; }
+
+/* UPDATE: Actions container */
+.card-actions {
+    display: flex;
+    justify-content: flex-end; /* Align buttons right */
+    align-items: center;
+    gap: 0.35rem; /* Increased gap */
+    /* margin-bottom: 0.5rem; */
+     /* Space before the value field */
+    width: 100%; /* Take full width */
+    margin-top: -0.5rem;
+    z-index: 3;
+}
+.card-action-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: inherit;
+    padding: 0.6rem; /* Slightly larger padding */
+    border-radius: 10px; /* Rounder buttons */
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* UPDATE: Increased button size */
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.card-action-button.nfc-action-button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  position: relative;
+}
+.card-action-button.nfc-action-button[disabled]::after {
+  display: none !important;
+  content: none !important;
+}
+/* UPDATE: Increased SVG icon size */
+.card-action-button svg { width: 20px; height: 20px; }
+.card-action-button:hover { background-color: rgba(255, 255, 255, 0.25); transform: scale(1.05); }
+.card-action-button:active { transform: scale(0.96); }
+
+/* Ensure the value field is styled correctly */
+.card-value-field {
+margin-top: 0.2rem;
+  padding: 0.5rem;
+  font-size: 0.5rem;
+  color: inherit;
+  background-color: transparent;
+  text-align: left;
+  font-family: var(--font-number);
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* --- Hold Indicator --- */
+.item-card::before { content: ''; position: absolute; bottom: 0; left: 0; height: 6px; width: var(--before-width, 0%); background-color: var(--mika_warning); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; z-index: 3; pointer-events: none; opacity: 0; transition: opacity 0.3s ease; }
+.item-card.is-holding::before { opacity: 0.8; }
+
+.item-card .hold-progress-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--mika_primary), var(--mika_secondary));
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  z-index: 4;
+  transition: width 0.2s linear;
+  pointer-events: none;
+  opacity: 0.85;
+}
+.item-card.is-holding .hold-progress-bar {
+  transition: width linear;
+}
+
+/* --- Ripple Effect */
+.ripple {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: scale(0);
+}
+
+/* --- Theme Toggle --- */
+.theme-toggle { position: fixed; bottom: 1rem; right: 1rem; background-color: var(--mika_card_bg); color: var(--mika_text_primary); border: 1px solid var(--mika_border_color); border-radius: 50%; width: 44px; height: 44px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 2px 8px var(--mika_shadow_color); z-index: 20; transition: background-color 0.2s ease, transform 0.2s ease; }
+.theme-toggle:hover { transform: scale(1.1); }
+.theme-toggle svg { width: 20px; height: 20px; }
+
+/* --- Swiper Customization --- */
+.swiper-pagination-bullet { background-color: var(--mika_quaternary); opacity: 0.6; transition: background-color 0.2s ease; }
+.swiper-pagination-bullet-active { background-color: var(--mika_primary); opacity: 1; }
+.swiper-button-next, .swiper-button-prev { color: var(--mika_primary); transition: color 0.2s ease; }
+.swiper-button-next:hover, .swiper-button-prev:hover { color: var(--mika_secondary); }
+@media (max-width: 640px) { .swiper-button-next, .swiper-button-prev { display: none; } }
+
+/* --- SweetAlert2 Customization --- */
+body.swal2-toast-shown .swal2-container { z-index: 10000 !important; }
+body.dark-mode .swal2-toast { background: var(--mika_card_bg_dark) !important; color: var(--mika_text_primary) !important; border: 1px solid var(--mika_border_dark); }
+body.light-mode .swal2-toast { background: var(--mika_card_bg_light) !important; color: var(--mika_text_primary) !important; border: 1px solid var(--mika_border_light); }
+.swal2-timer-progress-bar { background: var(--mika_primary) !important; }
+
+/* --- QR Code Modal Placeholder --- */
+.qr-code-modal-content { padding: 1rem; text-align: center; margin-bottom: 1rem; }
+.qr-code-modal-content img, .qr-code-modal-content canvas { display: block; margin: 1rem auto; max-width: 95%; height: auto; border: 1px solid var(--mika_border_color); padding: 5px; background-color: white; border-radius: 8px; }
+.qr-code-modal-content p { font-size: 0.6rem; color: var(--mika_text_primary); margin-top: 1rem; word-break: normal; 
+     }
+body.dark-mode .swal2-popup.qr-code-modal { background: var(--mika_card_bg_dark) !important; color: var(--mika_text_primary) !important; }
+body.light-mode .swal2-popup.qr-code-modal { background: var(--mika_card_bg_light) !important; color: var(--mika_text_primary) !important; }
+
+/* Ensure QR modal adapts to light and dark themes */
+body.light-mode .qr-code-modal {
+    background-color: var(--mika_card_bg_light);
+    color: var(--mika_text_primary);
+}
+body.dark-mode .qr-code-modal {
+    background-color: var(--mika_card_bg_dark);
+    color: var(--mika_text_primary);
+}
+
+/* Style the QR modal header */
+.qr-code-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--mika_border_color);
+}
+.qr-code-modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--mika_text_primary);
+}
+.qr-code-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--mika_text_primary);
+    cursor: pointer;
+}
+.qr-code-modal-close:hover {
+    color: var(--mika_primary);
+}
+
+/* Style for the modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Style for the QR modal logo */
+.qr-code-modal-logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 1rem !important;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* --- Stack view styles --- */
+.card-stack-view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  
+}
+.stack-swiper {
+  width: 90vw;
+  max-width: 90vw;
+  min-height: 90vh;
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stack-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.stack-swiper .item-card {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    min-height: 280px;
+    aspect-ratio: 1.3 / 1;
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 25px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+/* Mobile adjustments for stack view cards */
+@media (max-width: 768px) {
+    .stack-swiper .item-card {
+        min-height: 364px; /* 280px * 1.3 = 30% taller */
+        width: 90vw; /* Ensure cards fit within device width with some margin */
+        max-width: 400px; /* Prevent cards from getting too wide */
+        margin: 0 auto;
+        aspect-ratio: 1.1 / 1; /* Slightly taller aspect ratio for mobile */
+    }
+    
+    .stack-swiper {
+        width: 100%;
+        padding: 0 5vw; /* Add some padding on the sides */
+        box-sizing: border-box;
+    }
+}
+
+/* Swiper cards effect overrides */
+.swiper-cards {
+  overflow: visible !important;
+}
+.swiper-cards .swiper-slide {
+  box-shadow: none;
+}
+
+.swiper-slide-shadow.swiper-slide-shadow-cards {
+    border-radius: 16px;
+    aspect-ratio: 1.586 / 1;
+    background: rgba(0,0,0,0.18);
+    box-shadow: 0 12px 40px 0 rgba(0,0,0,0.22), 0 2px 8px 0 rgba(0,0,0,0.10);
+    width: 100% !important;
+    height: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 0;
+    opacity: 1 !important;
+    pointer-events: none;
+    transition: box-shadow 0.3s, background 0.3s;
+}
+
+/* --- Utilities --- */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@media (max-width: 768px) { 
+    .card-list-header {
+        /* padding-top: 35px; */
+        padding:40px 10px;
+      
+    }
+    .card-top-content {
+        display: grid;
+        grid-template-columns: 57% auto;
+        gap:20px;
+      }
+      .card-logo {
+        position: relative;
+        width: clamp(83px, 18%, 100px);
+        height: auto;
+        margin-bottom: 10px;
+        opacity: 0.9;
+      }
+      .card-text-block p{
+        font-size: x-small !important;
+      }      
+}
+
+@media (max-width: 768px) { 
+    /* Make the header fixed and ensure it stays on top */
+    header, .card-list-header {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 100;
+    }
+    /* Add top padding to main content so it's not hidden under the header */
+    .main-container,
+    .card-list-container {
+        padding-top: var(--header-height, 105px) !important;
+    }
+    /* Center the card grid horizontally and limit its width */
+    .card-grid {
+        grid-template-columns: 1fr;
+        max-width: 85vw;
+        width: 85vw;
+        padding: 20px 2vw;
+    }
+    .card-stack-view {
+        width: 90vw;
+        max-width: 90vw;
+        overflow-x: visible;
+        padding: 0;
+    }
+    .stack-swiper {
+        width: 100vw;
+        max-width: 90vw;
+        height: 70vh;
+        min-height: 220px;
+        margin: 0;
+    }
+    .stack-swiper .item-card {
+        width: 95vw;
+        max-width: 95vw;
+        min-width: 0;
+        margin: 0 auto;
+        min-height: 280px;
+        aspect-ratio: 1.5 / 1.2;
+        padding:2.5rem 0;
+    }
+    html, body, .card-grid {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+}
+
+.card-top-content {
+    display: grid;
+    grid-template-columns: 66% auto;
+    gap:10px;
+  }
+
+@media (max-width: 768px) { 
+    * { 
+        --header-height: 105px; 
+        --card-grid-gap: 1.6rem;
+    } 
+    .card-list-header {
+        /* padding-top: 35px; */
+        padding:40px 10px;
+      
+    }
+
+
+      .card-top-content {
+        display: grid;
+        grid-template-columns: 55% auto;
+        gap:20px;
+      }
+
+      .card-logo {
+        position: relative;
+        width: clamp(83px, 18%, 100px);
+        height: auto;
+        margin-bottom: 10px;
+        opacity: 0.9;
+        display: contents;
+      }
+      .card-text-block p{
+        font-size: x-small !important;
+      }   
+      .card-value-field {
+        margin-top: 0;
+        padding: 0.6rem;
+        font-size: x-small;
+        color: inherit;
+        background-color: transparent;
+        text-align: left;
+        padding-left: 0px;
+      } 
+      .category-slide h2{
+        line-height: 1;
+        color: var(--mika_bg_light);
+    }  
+}
+
+@media (min-width: 768px) { 
+    .qr-modal-content.immersive .card-logo{
+        max-width: 20vw !important;
+    }
+    .stack-swiper{
+        /* padding:5vh 5vw;
+        width: 50vw;
+        height: 50vh; */
+    }
+    .modal-header-row{
+        padding: 4rem 3rem;
+    }
+    .modal-title{
+    font-size: 4rem !important;
+    padding-left: 4rem !important;
+    line-height: 0.9;
+    padding: 2rem 2rem;
+    }
+    #qrcode-container img{
+        width: 40vh;
+    padding: 2vh;
+    }
+    .modal-btm{
+        right: 3rem;
+        bottom: 3.5rem;
+        position: absolute;
+        text-align: right !important;
+    }
+    .stack-swiper {
+        width: 60vw;
+    max-width: 80vw;
+    }
+    .modal-logo{
+        width: 200px !important;
+        height: 200px !important;
+        margin: 2rem;
+        margin-left: 4rem;
+    }
+    .category-slide h2{
+        font-size: 5rem;
+    }
+   .swiper-cards .swiper-slide{
+        padding: 1rem;
+        width: 40vw !important;
+    }
+    .swiper-slide.category-slide{
+        padding: 6rem;
+    }
+      .stack-swiper {
+    width: 40vw;
+    max-width: 99vw;
+  }
+
+}
+
+.swiper-cards .card-logo {
+    align-self: flex-start;
+  }
+
+  .swiper-slide-shadow.swiper-slide-shadow-cards{
+    opacity: 0 !important;
+  }
+
+.qr-modal-body .card-value-field {
+  text-align: center !important;
+}
+/* .qr-modal-body div {
+    margin: 2rem 0px;
+} */
+
+.modal-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem 2rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .modal-body {
+        gap: 1rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* .modal-content {
+        width: 90% !important;
+        max-width: 90% !important;
+    } */
+    .modal-header-row {
+        padding: 4rem 3rem;
+    }
+}
+.stack-swiper .item-card {
+    aspect-ratio: 1/0.6;
+margin-top: 15vh;
+
+}
+
+
+
+
+/* --- Light Rays Background --- */
+.light-rays-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 120vw;
+	height: 100vh;
+	z-index: 1;
+	mix-blend-mode: overlay;
+	opacity: 0.3;
+	pointer-events: none;
+	overflow: visible;
+}
+
+.light-ray {
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    width: 20px;
+    height: 120%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 30%, rgba(255,255,255,0) 100%);
+    transform-origin: 0% 100%;
+}
+
+/* For multiple elements with different timings */
+@keyframes randomWidthMulti {
+    0% {
+        width: 200px;
+         background-position: 0% center;
+    }
+    15% {
+        width: 290px;
+    }
+    30% {
+        width: 330px;
+    }
+    45% {
+        width: 350px;
+    }
+    60% {
+        width: 370px;
+    }
+    75% {
+        width: 4120px;
+    }
+    90% {
+        width: 440px;
+    }
+    100% {
+        width: 520px;
+         background-position: 200% center;
+        
+    }
+}
+
+.light-ray {
+    animation: randomWidthMulti 85s infinite alternate;
+}
+
+
+/* --- Text Animation --- */
+.swiper-slide-active .category-title {
+    animation: focus-in-contract-bck 1s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.3s;
+}
+
+@keyframes focus-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        transform: translateZ(300px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(12px);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
+
+.item-card.elegant-card.stack-tall-card .card-logo{
+	max-width: 285px !important;
+	max-height: 38vh !important;
+    padding-top: 5%;
+}
+
+.item-card {
+  /* Ensure text is readable with fallbacks */
+  --contrast-text: var(--card-text-color, #222);
+  color: var(--contrast-text);
+}
+
+.card-name,
+.card-description,
+.card-value-field {
+  color: inherit; /* Inherit from parent which has the contrast color */
+}
+
+/* Improve accessibility for focus states */
+.item-card:focus {
+  outline: 2px solid var(--contrast-text);
+  outline-offset: 2px;
+}
+.mkx, .mkx+p{
+    font-family: var(--font-heading);
+  font-size: clamp(0.35rem, 3.5vw, 0.75rem) !important;
+  opacity: 0.9;
+  margin-top:0.1rem;
+  line-height: 0.9;
+}
+
+/* .item-card.elegant-card  */
+.card-grid-layout .item-card, .card-grid .item-card{
+    padding-top: 0.8em;
+}
+.card-grid-layout .card-logo,
+.card-grid .card-logo{
+    align-self: self-start;
+}
+
+.card-grid-layout .card-text-block ,
+.card-grid .card-text-block {
+  width: 100%;
+  align-self: baseline;
+  padding-top: 0.4rem;
+}
+
+/* --- Tablet & Landscape Phone Responsiveness --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Adjust grid for 2 columns on tablets */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 60px 1.5rem;
+    }
+
+    .item-card {
+        padding: 1.2rem;
+        aspect-ratio: 1.5 / 1; /* Adjust aspect ratio for tablets */
+    }
+
+    .card-logo img, .card-logo svg {
+        max-width: 100px; /* Adjust logo size for tablets */
+    }
+
+    .card-name {
+        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    }
+
+    .card-description {
+        font-size: clamp(0.6rem, 2vw, 0.75rem);
+    }
+
+    /* Category view adjustments */
+    .category-slide h2 {
+        font-size: 4rem;
+    }
+}
+
+/* --- Portrait Tablet & Large Phones --- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* Double column for portrait tablets */
+        max-width: 90vw;
+    }
+
+    .item-card {
+        aspect-ratio: 1.2 / 1; /* Adjust aspect ratio for portrait tablets */
+    }
+
+    .card-logo img, .card-logo svg {
+        max-width: 80px; /* Adjust logo size for portrait tablets */
+    }
+
+    .category-slide h2 {
+        font-size: 3.5rem;
+    }
+}
+
+.modal-logo-img {
+    width: 150px; /* Default size */
+    height: 150px;
+    object-fit: contain;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Responsive styles for the logo */
+@media (min-width: 768px) and (max-width: 1360px) {
+.stack-swiper .item-card {
+  aspect-ratio: 1/0.98;
+  margin-top: 15vh;
+}
+}
+@media (max-width: 1024px) {
+    .modal-logo-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-logo-img {
+        width: 100px;
+        height: 100px;
+    }
+     .swiper-cards .swiper-slide{
+        padding: 1rem;
+        width: 80vw;
+    }
+    .card-name {
+  font-size:  1.6rem;
+  font-weight: 700;
+  line-height: 0.8;
+  color: inherit;
+}
+
+.card-grid-layout .card-text-block, .card-grid .card-text-block {
+  width: 100%;
+  align-self: baseline;
+  padding-top: 1.4rem;
+}
+
+}
+
+@media (max-width: 480px) {
+    .modal-logo-img {
+       width: 180px;
+    height: 180px;
+    }
+.item-card.elegant-card.stack-tall-card  .card-logo img, .item-card.elegant-card.stack-tall-card .card-logo svg {
+	width: 100%;
+	max-width: 110px;
+	max-height: 10vh;
+	object-fit: contain;
+	border-radius: 0;
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+.stack-swiper .item-card {
+  aspect-ratio: 1/1.6;
+  margin-top: -2vh;
+}
+
+}

@@ -1,0 +1,424 @@
+{
+    "categories": [
+        {
+            "id": "profile-links",
+            "name": "እንትን ላይ Hi በለኝ",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f23",
+                    "title": "LinkedIn Profile",
+                    "description": "Professional network profile.",
+                    "value": "https:\/\/www.linkedin.com\/in\/mikafekadu",
+                    "icon": "assets\/icons\/ino.svg",
+                    "color": "#0072b1",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f24",
+                    "title": "IG Personal",
+                    "description": "Visual updates and inspiration.",
+                    "value": "https:\/\/www.instagram.com\/mikafekadu",
+                    "icon": "assets\/icons\/instagram.svg",
+                    "color": "#e4405f",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f25",
+                    "title": "Linktree",
+                    "description": "Central hub for links.",
+                    "value": "https:\/\/linktr.ee\/mikafekadu",
+                    "icon": "assets\/icons\/linktree-svgrepo-com.svg",
+                    "color": "#d2e823",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f26",
+                    "title": "Email Address",
+                    "description": "Primary contact email.",
+                    "value": "i@mikafekadu.com",
+                    "icon": "assets\/icons\/svg_ (43).svg",
+                    "color": "#e6d2be",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f27",
+                    "title": "Phone Number",
+                    "description": "Direct contact number.",
+                    "value": "+251 913 109 253",
+                    "icon": "assets\/icons\/phone.png",
+                    "color": "#0548c5",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f28",
+                    "title": "የቀኑ ቅኔ Spotify",
+                    "description": "",
+                    "value": "https:\/\/open.spotify.com\/playlist\/6Sxuu13MvS8tO7zn7AcsXL",
+                    "icon": "assets\/icons\/spotify-logo-svgrepo-com.svg",
+                    "color": "#1ed760",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f29",
+                    "title": "የቀኑ ቅኔ",
+                    "description": "the telegram music channel",
+                    "value": "https:\/\/t.me\/songofthedaybymika",
+                    "icon": "assets\/icons\/concept.svg",
+                    "color": "#25231f",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f2a",
+                    "title": "Behance",
+                    "description": "Behance Portfolio",
+                    "value": "https:\/\/www.behance.net\/mikafekadu",
+                    "icon": "assets\/icons\/behance.svg",
+                    "color": "#053eff",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f2b",
+                    "title": "A&P",
+                    "description": "Law Firm",
+                    "value": "https:\/\/www.aaclo.com\/",
+                    "icon": "assets\/icons\/AAA-logo-2020-white.png",
+                    "color": "#184071",
+                    "allow_qr": true,
+                    "allow_share": false
+                }
+            ]
+        },
+        {
+            "id": "banking-info",
+            "name": "Account ላክልኝ",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f2c",
+                    "title": "CBE",
+                    "description": "Commercial Bank of Ethiopia",
+                    "value": "Commercial Bank of Ethiopia: Mikael Fekadu - 1000028607548",
+                    "icon": "assets\/icons\/cbe.svg",
+                    "color": "#6b1b6b",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f2d",
+                    "title": "Awash Bank",
+                    "description": "Awash Bank Account",
+                    "value": "Awash Bank: MikaEl Fekadu - 01320818251000",
+                    "icon": "assets\/icons\/target audience.svg",
+                    "color": "#000066",
+                    "allow_qr": true,
+                    "allow_share": false
+                },
+                {
+                    "id": "item_63e8c4a9b0f2e",
+                    "title": "Abyssinia",
+                    "description": "Bank of Abyssinia",
+                    "value": "Bank Of Abyssinia: Mikael Fekadu - 63112143",
+                    "icon": "assets\/icons\/office.svg",
+                    "color": "#f2ad1c",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f2f",
+                    "title": "Birhan Personal",
+                    "description": "Birhan Bank S.C.",
+                    "value": "Birhan Bank: MikaEl Fekadu - 1011613535359",
+                    "icon": "assets\/icons\/berhan.svg",
+                    "color": "#003da5",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f30",
+                    "title": "Hibret Bank",
+                    "description": "United Bank S.C.",
+                    "value": "United Bank: MikaEl Fekadu - 1240416825810010",
+                    "icon": "assets\/icons\/truck.svg",
+                    "color": "#00afac",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f31",
+                    "title": "Dashen Bank",
+                    "description": "Dashen Bank S.C.",
+                    "value": "Dashen Bank: Mikael Fekadu - 5122190777011",
+                    "icon": "assets\/icons\/stationery.svg",
+                    "color": "#bae4ff",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f32",
+                    "title": "Wegagen",
+                    "description": "Wegagen Bank S.C.",
+                    "value": "Wegagen Bank: MikaEl Fekadu - 00607642",
+                    "icon": "assets\/icons\/wegagen.svg",
+                    "color": "#f36c24",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f33",
+                    "title": "Nib Personal",
+                    "description": "Nib International Bank S.C.",
+                    "value": "Nib International Bank: MikaEl Fekadu - 333 SAV 214",
+                    "icon": "assets\/icons\/nib.svg",
+                    "color": "#8e5422",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f34",
+                    "title": "Telebirr",
+                    "description": "Mobile money option.",
+                    "value": "MikaEl Fekadu: 0913109253",
+                    "icon": "assets\/icons\/TeleBirr Logo.svg",
+                    "color": "#dbebc7",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "client-links",
+            "name": "ዲዛይን ስንት ነው?",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f35",
+                    "title": "Brand Design Brief",
+                    "description": "New branding projects.",
+                    "value": "https:\/\/forms.gle\/26u2eSBL63PnYz9i8",
+                    "icon": "assets\/icons\/box.svg",
+                    "color": "#e9c708",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f36",
+                    "title": "Website Design Brief",
+                    "description": "New website projects.",
+                    "value": "https:\/\/forms.gle\/BbiqxoDkxQUoLEgG7",
+                    "icon": "assets\/icons\/identity.svg",
+                    "color": "#95df7a",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f37",
+                    "title": "Company Profile Brief",
+                    "description": "Company profile design.",
+                    "value": "https:\/\/forms.gle\/nEoy8JkYd6Kbu3b17",
+                    "icon": "assets\/icons\/procuratorate-svgrepo-com.svg",
+                    "color": "#d2c8aa",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f38",
+                    "title": "Testimonial",
+                    "description": "Submit your feedback.",
+                    "value": "https:\/\/www.mikafekadu.com\/testimonials\/submit",
+                    "icon": "assets\/icons\/svg_ (9).svg",
+                    "color": "#001e14",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f22",
+                    "title": "Portfolio Website",
+                    "description": "Main portfolio and contact.",
+                    "value": "https:\/\/www.mikafekadu.com",
+                    "icon": "assets\/icons\/portfolio.svg",
+                    "color": "#ff5001",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "pods",
+            "name": "ሸጋ Hangouts on the Net",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f39",
+                    "title": "Netsanet",
+                    "description": "Shega Podcast Tsilate, & Tsion",
+                    "value": "https:\/\/www.youtube.com\/@Netsanet_Podcast",
+                    "icon": "assets\/icons\/netsanet-2.png",
+                    "color": "#09a841",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3a",
+                    "title": "Design Matters",
+                    "description": "with Debbie Millman",
+                    "value": "https:\/\/www.youtube.com\/watch?v=4TRlBvt0MDo&list=PLqB-qzn1yXRnlPyYOKHil9uS7S0_jpjga",
+                    "icon": "assets\/icons\/debbie.png",
+                    "color": "#8bdeda",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3b",
+                    "title": "99% Invisible",
+                    "description": "",
+                    "value": "https:\/\/www.youtube.com\/@99percentinvisiblepodcast",
+                    "icon": "assets\/icons\/99i.png",
+                    "color": "#000000",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3c",
+                    "title": "FUTUR",
+                    "description": "With Chris Do & Team",
+                    "value": "https:\/\/www.youtube.com\/@thefutur",
+                    "icon": "assets\/icons\/The_Futur_trans.png",
+                    "color": "#0000dd",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3d",
+                    "title": "Dejaf TV",
+                    "description": "with Dawit & Guests",
+                    "value": "https:\/\/www.youtube.com\/@dejaftv",
+                    "icon": "assets\/icons\/Dejaf_TV_2.png",
+                    "color": "#e63d00",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f22",
+                    "title": "Portfolio Website",
+                    "description": "<p>Main portfolio and contact.<\/p>",
+                    "value": "https:\/\/www.mikafekadu.com",
+                    "icon": "assets\/icons\/portfolio.svg",
+                    "color": "#ff5001",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "essay-channels",
+            "name": "Essay፣ እንዲህ ነው እንጂ..",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f3e",
+                    "title": "FD Signifier",
+                    "description": "takes and talks of Fiq",
+                    "value": "https:\/\/www.youtube.com\/@FDSignifire",
+                    "icon": "assets\/icons\/F.D_Signifier.png",
+                    "color": "#798b63",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f3f",
+                    "title": "Pursuit of Wonder",
+                    "description": "Powerful ideas and stories",
+                    "value": "https:\/\/www.youtube.com\/@PursuitofWonder",
+                    "icon": "assets\/icons\/Pursuit_of_Wonder_trans.png",
+                    "color": "#0e2e5f",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f40",
+                    "title": "The Vile Eye",
+                    "description": "Analysis of Evil",
+                    "value": "https:\/\/www.youtube.com\/@TheVileEye",
+                    "icon": "assets\/icons\/The_Vile_Eye.png",
+                    "color": "#020202",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f41",
+                    "title": "Some More News",
+                    "description": "Better News",
+                    "value": "https:\/\/www.youtube.com\/@SMN",
+                    "icon": "assets\/icons\/SMN.png",
+                    "color": "#4e99bb",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f42",
+                    "title": "Harland Spinks",
+                    "description": "takes and talks of Harland",
+                    "value": "https:\/\/www.youtube.com\/@harlandspinks",
+                    "icon": "assets\/icons\/Harland_Spinks.png",
+                    "color": "#282924",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "tuts-corner",
+            "name": "Skills ልህቀት  Center",
+            "items": [
+                {
+                    "id": "item_63e8c4a9b0f43",
+                    "title": "Panter",
+                    "description": "Illustrator tutorials",
+                    "value": "https:\/\/www.youtube.com\/@PANTERvision",
+                    "icon": "assets\/icons\/P_A_N_T_E_R_X.png",
+                    "color": "#242120",
+                    "allow_qr": true,
+                    "allow_share": true
+                },
+                {
+                    "id": "item_63e8c4a9b0f44",
+                    "title": "Javier Mercedes",
+                    "description": "Motion tutorials",
+                    "value": "https:\/\/www.youtube.com\/@JavierMercedes",
+                    "icon": "assets\/icons\/JM.png",
+                    "color": "#0a4ce6",
+                    "allow_qr": true,
+                    "allow_share": true
+                }
+            ]
+        },
+        {
+            "id": "web-portfolio",
+            "name": "website ትስራለህ እንዴ?",
+            "items": []
+        },
+        {
+            "id": "smoke-cat-2",
+            "name": "Smoke Category 2",
+            "items": [
+                {
+                    "id": "item_68a5fc76d3c72",
+                    "title": "Smoke Item JS",
+                    "description": "desc",
+                    "value": "https:\/\/example.com",
+                    "icon": "",
+                    "color": "#00ff00",
+                    "allow_qr": true,
+                    "allow_share": false
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "modified": "2025-08-20T20:10:51+00:00"
+    }
+}
