@@ -224,9 +224,14 @@ const getGradientStopColor = (baseColor) => {
     // --- NFC Sharing Logic ---
     const handleNfcShare = async (value, buttonElement) => {
         if (!value) return;
-        
+
+        if (!isNfcSupported()) {
+            showToast('NFC is not supported on this device.', 'error');
+            return;
+        }
+
         const buttonRect = buttonElement.getBoundingClientRect();
-        
+
         // Create NFC modal
         let nfcModal = document.getElementById('nfc-share-modal');
         if (nfcModal) {
@@ -285,6 +290,10 @@ const getGradientStopColor = (baseColor) => {
                             <div style="width: 120px; height: 120px; border: 4px solid #fff; border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.4;"></div>
                             <div style="width: 90px; height: 90px; border: 4px solid #fff; border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.6;"></div>
                         </div>
+                    </div>
+                    <div class="qr-code-fallback" style="display: none; flex-direction: column; align-items: center; gap: 1rem; margin-top: 2rem;">
+                        <p>Or scan this QR code:</p>
+                        <div id="nfc-modal-qrcode"></div>
                     </div>
                 </div>
             </div>
@@ -359,47 +368,23 @@ const getGradientStopColor = (baseColor) => {
         modalOverlay.addEventListener('click', closeNfcModal);
 
         try {
-            // Check if Web NFC is available
-            if (!('NDEFReader' in window)) {
-                throw new Error('NFC is not supported on this device');
-            }
-
             const ndef = new NDEFReader();
-            
-            // Update UI to show scanning status
-            const updateNfcStatus = (title, text, icon) => {
-                nfcModal.querySelector('.nfc-status-title').textContent = title;
-                nfcModal.querySelector('.nfc-status-text').textContent = text;
-                nfcModal.querySelector('.nfc-status-icon').textContent = icon;
-            };
-
-            try {
-                await ndef.scan();
-                updateNfcStatus('Scanning...', 'Looking for NFC devices nearby', '🔍');
-
-                ndef.onreading = () => {
-                    updateNfcStatus('Device Found!', 'Sending data...', '📲');
-                    
-                    // Write the data
-                    ndef.write({ records: [{ recordType: "text", data: value }] })
-                        .then(() => {
-                            updateNfcStatus('Success!', 'Data has been shared successfully', '✅');
-                            setTimeout(closeNfcModal, 2000);
-                        })
-                        .catch(error => {
-                            updateNfcStatus('Error', `Failed to write data: ${error.message}`, '❌');
-                            setTimeout(closeNfcModal, 3000);
-                        });
-                };
-
-            } catch (error) {
-                updateNfcStatus('Error', `Failed to start NFC: ${error.message}`, '❌');
-                setTimeout(closeNfcModal, 3000);
-            }
-
+            await ndef.write({ records: [{ recordType: "text", data: value }] });
+            showToast('Data shared via NFC!', 'success');
+            setTimeout(closeNfcModal, 2000);
         } catch (error) {
-            showToast('NFC is not supported on this device', 'error');
-            closeNfcModal();
+            console.error('NFC sharing failed:', error);
+            showToast(`NFC failed: ${error.message}`, 'error');
+            // Show QR code fallback
+            const qrFallback = nfcModal.querySelector('.qr-code-fallback');
+            if (qrFallback) {
+                qrFallback.style.display = 'flex';
+                new QRCode(document.getElementById('nfc-modal-qrcode'), {
+                    text: value,
+                    width: 128,
+                    height: 128
+                });
+            }
         }
     };
 
@@ -1515,41 +1500,70 @@ const getGradientStopColor = (baseColor) => {
             console.log("ViewInfo: Initializing...");
             setupThemeToggle();
 
-            // initCustomCursor();
-            // const fluidCursorManager = initFluidCursor();
-
             if (!categorySwiperView || !cardListViewsContainer || !mainContainer) {
                 console.log("ViewInfo: Essential containers missing. Assuming minimal view (e.g., login). Performing basic fade-in.");
                 const containerToShow = mainContainer || body.children[0];
-                 if(containerToShow) gsap.to(containerToShow, { opacity: 1, duration: INITIAL_FADE_DURATION, ease: 'power1.out' });
+                if (containerToShow) gsap.to(containerToShow, { opacity: 1, duration: INITIAL_FADE_DURATION, ease: 'power1.out' });
                 return;
             }
 
             gsap.set(mainContainer, { opacity: 0 });
 
-            console.log("ViewInfo: Fetching data...");
-            const response = await fetch(DATA_FILE_PATH);
-            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status} fetching ${DATA_FILE_PATH}`);
-            jsonData = await response.json();
-
-            if (!jsonData || !Array.isArray(jsonData.categories) || jsonData.categories.length === 0) {
-                 throw new Error("Data invalid or missing 'categories' array.");
+            // --- Offline First Approach ---
+            let isDataFromCache = false;
+            try {
+                const cachedData = localStorage.getItem('qaInfoWalletData');
+                if (cachedData) {
+                    jsonData = JSON.parse(cachedData);
+                    if (jsonData && Array.isArray(jsonData.categories) && jsonData.categories.length > 0) {
+                        console.log("ViewInfo: Data loaded from localStorage cache.");
+                        isDataFromCache = true;
+                        await buildUI();
+                    }
+                }
+            } catch (e) {
+                console.error("ViewInfo: Error reading from localStorage", e);
             }
-            console.log("ViewInfo: Data fetched successfully.");
 
-            await setupCategorySwiper();
-            // fluidCursorManager.attachEventsToSlides();
-            await createAndPopulateCardListViews();
-            attachGlobalEventListeners();
+            // --- Fetch from Network ---
+            try {
+                console.log("ViewInfo: Fetching data from network...");
+                const response = await fetch(`${DATA_FILE_PATH}?t=${new Date().getTime()}`); // Bust cache
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                const freshData = await response.json();
 
-            
+                if (!freshData || !Array.isArray(freshData.categories) || freshData.categories.length === 0) {
+                    throw new Error("Fetched data invalid or missing 'categories' array.");
+                }
 
-            gsap.set(categorySwiperView, { display: 'block', visibility: 'visible', opacity: 1 });
-            jsonData.categories.forEach(category => {
-                const cardList = document.getElementById(`card-list-${category.id}`);
-                if (cardList) gsap.set(cardList, { display: 'none', visibility: 'hidden', opacity: 0 });
-            });
+                // --- Sync and Update ---
+                const cachedDataString = JSON.stringify(jsonData);
+                const freshDataString = JSON.stringify(freshData);
 
+                if (cachedDataString !== freshDataString) {
+                    console.log("ViewInfo: Data has changed. Updating UI and cache.");
+                    jsonData = freshData;
+                    localStorage.setItem('qaInfoWalletData', freshDataString);
+                    await buildUI(); // Rebuild UI with fresh data
+                    showToast('Data updated!', 'success');
+                } else {
+                    console.log("ViewInfo: Data is up to date.");
+                    if (!isDataFromCache) {
+                        await buildUI(); // If not already built from cache, build it now
+                    }
+                }
+            } catch (error) {
+                console.error("ViewInfo: FAILED TO FETCH FROM NETWORK:", error);
+                if (!isDataFromCache) {
+                    // If fetch fails and we have no cached data, show an error
+                    throw new Error("Application could not be loaded. Please check your network connection.");
+                } else {
+                    // If fetch fails but we have cached data, inform the user they are offline
+                    showToast('You are offline. Showing cached data.', 'info');
+                }
+            }
+
+            // --- Final Fade-in ---
             console.log("ViewInfo: Initial App Fade-in...");
             gsap.to(mainContainer, {
                 opacity: 1,
@@ -1565,6 +1579,22 @@ const getGradientStopColor = (baseColor) => {
                 gsap.to(mainContainer, { opacity: 1, duration: 0.5 });
             }
         }
+    };
+
+    const buildUI = async () => {
+        console.log("ViewInfo: Building UI...");
+        await setupCategorySwiper();
+        await createAndPopulateCardListViews();
+        attachGlobalEventListeners();
+
+        gsap.set(categorySwiperView, { display: 'block', visibility: 'visible', opacity: 1 });
+        if (jsonData && jsonData.categories) {
+            jsonData.categories.forEach(category => {
+                const cardList = document.getElementById(`card-list-${category.id}`);
+                if (cardList) gsap.set(cardList, { display: 'none', visibility: 'hidden', opacity: 0 });
+            });
+        }
+        console.log("ViewInfo: UI build complete.");
     };
 
     // const createItemCardsHTML = (items) => {
